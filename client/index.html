@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
+    
     <meta charset="UTF-8">
     <title>Negociações</title>
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -10,11 +11,11 @@
     
     <h1 class="text-center">Negociações</h1>
     
-    <form class="form">
+    <form class="form" onsubmit="negociacaoController.adiciona(event)">
         
         <div class="form-group">
             <label for="data">Data</label>
-            <input type="date" id="data" class="form-control" required autofocus/>        
+            <input type="date" id="data" class="form-control"  required autofocus/>        
         </div>    
         
         <div class="form-group">
@@ -59,9 +60,10 @@
     </table>
     
     <script src="./js/app/models/Negociacao.js"></script>
+    <script src="./js/app/controllers/NegociacaoController.js"></script>
 
     <script>
-
+        let negociacaoController = new NegociacaoController();
     </script>
 </body>
 </html>
