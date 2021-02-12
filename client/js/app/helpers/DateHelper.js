@@ -10,7 +10,7 @@ class DateHelper {
         const regexp = /\d{4}-\d{2}-\d{2}/;
         if (!regexp.test(texto)) throw new Error('Deve estar no formato "yyyy-mm-dd"')
 
-        return new Date(...texto.split('-').map( (el, i) => el - i % 2 ));
+        return new Date(...texto.split('-').map((el, i) => el - i % 2));
     }
 
     static dataParaTexto(data) {
@@ -19,7 +19,7 @@ class DateHelper {
         const mes = (data.getMonth() + 1);
         const ano = data.getFullYear();
 
-       return `Data: ${dia}/${mes}/${ano}`
+        return `Data: ${dia}/${mes}/${ano}`
     }
 
 }
