@@ -19,7 +19,7 @@ class DateHelper {
         const mes = (data.getMonth() + 1);
         const ano = data.getFullYear();
 
-        return `Data: ${dia}/${mes}/${ano}`
+        return `${dia}/${mes}/${ano}`
     }
 
 }
